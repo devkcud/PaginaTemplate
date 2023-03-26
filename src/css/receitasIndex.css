@@ -1,0 +1,34 @@
+div.container {
+  display: flex;
+}
+
+div.container ul li {
+  height: 150px;
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+div.container ul li a {
+  position: relative;
+}
+
+div.container ul li a div.gradient {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+div.container ul li a img {
+  width: 300px;
+  aspect-ratio: 2/1;
+
+  object-fit: cover;
+}
+
+div.container ul li a h2 {
+  position: absolute;
+}
