@@ -1,0 +1,85 @@
+div.container {
+  max-width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  margin-inline: auto;
+}
+
+div.container > div {
+  width: 30vw;
+}
+
+@media only screen and (max-width: 758px) {
+  div.container {
+    max-width: 90%;
+
+    display: flex;
+    align-items: center;
+
+    margin-inline: auto;
+  }
+
+  div.container > div {
+    width: 88%;
+  }
+}
+
+div.container > div div {
+  margin-bottom: 1rem;
+}
+
+div.container p {
+  font-style: italic;
+}
+
+div.container input[type="text"], textarea {
+  width: 100%;
+
+  padding: 1rem;
+
+  border: 2px solid #CDCDCD;
+  border-radius: 0 10px 10px 10px;
+}
+
+textarea {
+  resize: none;
+
+  height: 200px;
+}
+
+span.red {
+  color: #FF5353;
+  font-weight: 800;
+}
+
+div.container button {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #FF5353;
+  color: #FFFFFF;
+
+  text-align: center;
+  text-decoration: none;
+
+  border: none;
+  padding: 0.8rem;
+
+  min-width: 15rem;
+
+  border-radius: 15px;
+
+  font-weight: 800;
+  font-size: 1.2rem;
+
+  transition: all 0.1s ease-in-out;
+}
+
+div.container button:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
