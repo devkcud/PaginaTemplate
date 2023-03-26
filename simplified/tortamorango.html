@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Torta de Morango</title>
+
+    <script src="https://livejs.com/live.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      * {
+        padding: 0;
+        margin: 0;
+
+        font-family: 'Poppins', sans-serif;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Pacifico', sans-serif;
+        font-weight: 300;
+      }
+
+      header {
+        height: 60px;
+
+        display: flex;
+        gap: 32px;
+
+        padding-block: 1rem;
+        padding-left: 1rem;
+
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      header a {
+        color: #FF5353;
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 800px)  {
+        header h1 {
+          display: none;
+        }
+      }
+
+      header ul {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        list-style: none;
+      }
+
+      header ul li {
+        font-size: 1.25rem;
+
+        transition: all 0.1s ease-in-out;
+      }
+
+      header ul li.disabled {
+        color: #AAAAAA;
+      }
+
+      header ul li a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      header ul li.selected a {
+        font-weight: 700;
+        color: #FF5353;
+      }
+
+      header ul li:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+
+      header ul li.disabled:hover {
+        cursor: not-allowed;
+      }
+
+      div.container {
+        --len: 8rem;
+        margin-inline: var(--len);
+
+        width: calc(100% - (var(--len) * 2));
+      }
+
+      div.container h1 {
+        text-align: center;
+      }
+
+      div.container > div {
+        display: flex;
+
+        justify-content: space-between;
+        gap: 5rem;
+
+        margin-bottom: 2rem;
+      }
+
+      div.container > div > img {
+        aspect-ratio: 16/9;
+        width: 500px;
+
+        object-fit: cover;
+
+        border-radius: 10px;
+      }
+
+      div.container div#preparo ul {
+        list-style: none;
+
+        counter-reset: preparo;
+      }
+
+      div.container div#preparo ul li {
+        counter-increment: preparo;
+        position: relative;
+
+        margin-bottom: 1rem;
+      }
+
+      div.container div#preparo ul li::before {
+        position: absolute;
+        top: -1rem;
+        left: -1.75rem;
+
+        content: counter(preparo);
+
+        font-family: 'Pacifico', sans-serif;
+        font-size: 1.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><h1>Página Template</h1></a>
+
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li class="disabled">Receitas</li>
+        <li class="disabled">Contato</li>
+      </ul>
+    </header>
+
+    <div class="container">
+      <h1>Torta de Morango</h1>
+
+      <div id="ingredientes">
+        <div>
+          <h2>Ingredientes</h2>
+
+          <ul>
+            <li>2 colheres (sopa) de margarina;</li>
+            <li>2 colheres (sopa) de óleo;</li>
+            <li>1 ovo inteiro;</li>
+            <li>2 colheres rasas (sopa) de açúcar;</li>
+            <li>1 pitada de sal;</li>
+            <li>1 colher rasa (sopa) de fermento em pó;</li>
+            <li>Farinha de trigo até a massa desgrudar da mão;</li>
+            <li>1 lata de leite condensado;</li>
+            <li>1 lata de creme de leite;</li>
+            <li>3 gemas;</li>
+            <li>3 copos de leite;</li>
+            <li>1 colher (sopa) de maisena;</li>
+            <li>2 caixinhas de morangos;</li>
+            <li>1 gelatina de morango.</li>
+          </ul>
+        </div>
+
+        <img src="img/tortamorango/mododepreparo.png" alt="Ingredientes para o cupcake">
+      </div>
+
+      <div id="preparo">
+        <div>
+          <h2>Modo de Preparo</h2>
+
+          <ul>
+            <li>Em primeiro lugar, faça a gelatina conforme o modo de preparo e deixe-a na geladeira.</li>
+            <li>Misture todos os ingredientes e mexa até levantar fervura.</li>
+            <li>Quanto você perceber que ele está bem cremoso, mexa bastante sem parar.</li>
+            <li>Na hora do uso, ele deve estar já frio ou levemente morno.</li>
+            <li>Misture todos os ingredientes e quando ela estiver no ponto, forre um pirex de médio a grande.</li>
+            <li>Fure a massa com um garfo e asse em fogo médio entre 10 a 15 minutos.</li>
+            <li>Quando dourar, está pronta.</li>
+            <li>Disponha a massa assada em um pirex e deixe esfriar um pouco.</li>
+            <li>Adicione o creme e, sobre ele, os morangos cortados na transversal.</li>
+            <li>Em seguida, adicione a gelatina já em ponto de clara.</li>
+            <li>Leve à geladeira por no mínimo 4 horas.</li>
+          </ul>
+        </div>
+
+        <img src="img/tortamorango/tortamorango2.png" alt="Cupcake já pronto">
+      </div>
+    </div>
+  </body>
+</html>
