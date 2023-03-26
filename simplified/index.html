@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Página Template</title>
+
+    <script src="https://livejs.com/live.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      * {
+        padding: 0;
+        margin: 0;
+
+        font-family: 'Poppins', sans-serif;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Pacifico', sans-serif;
+        font-weight: 300;
+      }
+
+      header {
+        height: 60px;
+
+        display: flex;
+        gap: 32px;
+
+        padding-block: 1rem;
+        padding-left: 1rem;
+
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      header a {
+        color: #FF5353;
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 800px)  {
+        header h1 {
+          display: none;
+        }
+      }
+
+      header ul {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        list-style: none;
+      }
+
+      header ul li {
+        font-size: 1.25rem;
+
+        transition: all 0.1s ease-in-out;
+      }
+
+      header ul li.disabled {
+        color: #AAAAAA;
+      }
+
+      header ul li a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      header ul li.selected a {
+        font-weight: 700;
+        color: #FF5353;
+      }
+
+      header ul li:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+
+      header ul li.disabled:hover {
+        cursor: not-allowed;
+      }
+
+      div.container {
+        margin: 2rem;
+      }
+
+      div.container ul {
+        margin-top: 2rem;
+        list-style: none;
+
+        display: flex;
+        gap: 32px;
+
+        justify-content: center;
+
+        width: 100%;
+      }
+
+      div.container ul li img {
+        aspect-ratio: 1;
+        width: 300px;
+
+        object-fit: cover;
+
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><h1>Página Template</h1></a>
+
+      <ul>
+        <li class="selected"><a href="index.html">Início</a></li>
+        <li class="disabled">Receitas</li>
+        <li class="disabled">Contato</li>
+      </ul>
+    </header>
+
+    <div class="container">
+      <h1>Sobre</h1>
+
+      <p>Bem-vindo ao nosso site de receitas! Aqui, você encontrará uma grande variedade de deliciosas receitas para todas as ocasiões. Nossas receitas são fáceis de seguir e usam apenas os ingredientes mais frescos.</p>
+
+      <ul>
+        <li>
+          <a href="cupcake.html">
+            <img src="img/cupcake/cupcake1.png" alt="Cupcake">
+          </a>
+        </li>
+
+        <li>
+          <a href="tiramisu.html">
+            <img src="img/tiramisu/tiramisu1.png" alt="Tiramusú">
+          </a>
+        </li>
+
+        <li>
+          <a href="tortamorango.html">
+            <img src="img/tortamorango/tortamorango1.png" alt="Torta de Morango">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

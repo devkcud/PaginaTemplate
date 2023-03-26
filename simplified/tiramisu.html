@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tiramisú</title>
+
+    <script src="https://livejs.com/live.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+      * {
+        padding: 0;
+        margin: 0;
+
+        font-family: 'Poppins', sans-serif;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Pacifico', sans-serif;
+        font-weight: 300;
+      }
+
+      header {
+        height: 60px;
+
+        display: flex;
+        gap: 32px;
+
+        padding-block: 1rem;
+        padding-left: 1rem;
+
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      header a {
+        color: #FF5353;
+        text-decoration: none;
+      }
+
+      @media only screen and (max-width: 800px)  {
+        header h1 {
+          display: none;
+        }
+      }
+
+      header ul {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        list-style: none;
+      }
+
+      header ul li {
+        font-size: 1.25rem;
+
+        transition: all 0.1s ease-in-out;
+      }
+
+      header ul li.disabled {
+        color: #AAAAAA;
+      }
+
+      header ul li a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      header ul li.selected a {
+        font-weight: 700;
+        color: #FF5353;
+      }
+
+      header ul li:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+
+      header ul li.disabled:hover {
+        cursor: not-allowed;
+      }
+
+      div.container {
+        --len: 8rem;
+        margin-inline: var(--len);
+
+        width: calc(100% - (var(--len) * 2));
+      }
+
+      div.container h1 {
+        text-align: center;
+      }
+
+      div.container > div {
+        display: flex;
+
+        justify-content: space-between;
+        gap: 5rem;
+
+        margin-bottom: 2rem;
+      }
+
+      div.container > div > img {
+        aspect-ratio: 16/9;
+        width: 500px;
+
+        object-fit: cover;
+
+        border-radius: 10px;
+      }
+
+      div.container div#preparo ul {
+        list-style: none;
+
+        counter-reset: preparo;
+      }
+
+      div.container div#preparo ul li {
+        counter-increment: preparo;
+        position: relative;
+
+        margin-bottom: 1rem;
+      }
+
+      div.container div#preparo ul li::before {
+        position: absolute;
+        top: -1rem;
+        left: -1.75rem;
+
+        content: counter(preparo);
+
+        font-family: 'Pacifico', sans-serif;
+        font-size: 1.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><h1>Página Template</h1></a>
+
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li class="disabled">Receitas</li>
+        <li class="disabled">Contato</li>
+      </ul>
+    </header>
+
+    <div class="container">
+      <h1>Tiramisú</h1>
+
+      <div id="ingredientes">
+        <div>
+          <h2>Ingredientes</h2>
+
+          <ul>
+            <li>1 pacote de biscoitos champangne;</li>
+            <li>500 g de queijo mascarpone (pode substituir com 500 g de requeijão cremoso tipo catupiry);</li>
+            <li>250 ml de creme de leite fresco;</li>
+            <li>3 gemas;</li>
+            <li>150 g de açúcar;</li>
+            <li>1 cálice de conhaque (opcional);</li>
+            <li>2 xícaras de café frio;</li>
+            <li>Chocolate em pó.</li>
+          </ul>
+        </div>
+
+        <img src="img/tiramisu/mododepreparo.png" alt="Ingredientes para o Tiramisú">
+      </div>
+
+      <div id="preparo">
+        <div>
+          <h2>Modo de Preparo</h2>
+
+          <ul>
+            <li>Bata o creme de leite na batedeira até obter um chantily firme.</li>
+            <li>Reserve.</li>
+            <li>Bata o açúcar com as gemas e o conhaque por 3 minutos.</li>
+            <li>Acrescente o chantily, o mascarpone e misture bem.</li>
+            <li>Molhe rapidamente os biscoitos no café (um a um) e coloque em um refratário formando uma camada, coloque por cima uma camada do creme, faça mais uma camada de biscoitos molhados no café e por último mais uma camada de creme.</li>
+            <li>Para finalizar polvilhe chocolate em pó amargo.</li>
+            <li>Leve à geladeira por no mínimo 3 horas e sirva.</li>
+          </ul>
+        </div>
+
+        <img src="img/tiramisu/tiramisu2.png" alt="Tiramisú já pronto">
+      </div>
+    </div>
+  </body>
+</html>
